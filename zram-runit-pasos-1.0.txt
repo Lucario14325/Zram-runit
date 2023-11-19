@@ -1,0 +1,30 @@
+# primero debes instalar el paquete zram-tools si no está instalado
+# Puedes hacerlo ejecutando el siguiente comando en la terminal
+
+
+  sudo pacman -S zram-tools
+
+
+# Una vez instalado, debes configurar zram
+# Puedes hacerlo creando un archivo de configuración en /etc/conf.d/zramswap o /etc/default/zramswap según la distribución
+# Abre tu editor de texto favorito como administrador y crea o edita el archivo de configuración zramswap:
+
+
+  sudo nano /etc/conf.d/zramswap
+  sudo nano /etc/default/zramswap
+
+
+# A continuación, puedes agregar la configuración deseada para zram
+# Por ejemplo:
+
+
+# Configuración para zram
+
+
+  zram_enabled=1
+  zram_size=512M  # Tamaño deseado para zram (ajusta según tus preferencias)
+  zram_streams=4  # Número de dispositivos zram a utilizar
+
+
+# Guarda el archivo y reinicia tu sistema para que los cambios surtan efecto
+# Después de reiniciar, zram debería estar activado y funcionando
